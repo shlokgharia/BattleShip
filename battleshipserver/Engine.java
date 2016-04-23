@@ -75,6 +75,7 @@ public class Engine
     {
         System.out.println("Please input name");
         String name = scan.nextLine();
+        ShipSelection ship = new ShipSelection();
         return true;
     }
 

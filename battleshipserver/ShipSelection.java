@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
+import java.util.*;
 
 /**
  * Houses all of the commands for the rows of buttons, from creating them to changing the colors
@@ -27,6 +28,7 @@ public class ShipSelection extends JFrame
         }
     }
     private static Button[][] board;
+    private static ArrayList<XYPoint> points = new ArrayList<XYPoint>();
     public ShipSelection()
     {
         this.setTitle("Moves Board Player 1");
@@ -50,6 +52,7 @@ public class ShipSelection extends JFrame
 
                         private void draw(int y, int x)
                         {
+                            points.add(new XYPoint(y, x));
                             if(board[x][y].getBackground() == Color.BLUE) 
                             {
                                 board[x][y].setBackground(Color.BLACK);
@@ -87,5 +90,9 @@ public class ShipSelection extends JFrame
         repaint();
         this.setSize(500,500);
         this.setVisible(true);
+    }
+    public ArrayList<XYPoint> getPoints()
+    {
+        return points;
     }
 }

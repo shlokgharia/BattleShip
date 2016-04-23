@@ -2,7 +2,7 @@
 /**
  * Write a description of class Engine here.
  * 
- * @author (your name) 
+ * @author Shlok Gharia & Akash Singhal  
  * @version (a version number or a date)
  */
 import java.io.ObjectInputStream;
@@ -57,13 +57,13 @@ public class Engine
             oos.writeObject(sendX);
             oos.writeObject(sendY);
             System.out.println("Now let's wait for Player 2");
-            oos.writeObject(true);
-            if((boolean) ois.readObject())
-            {
+            //oos.writeObject(true);
+            //if((boolean) ois.readObject())
+            //{
                 selectionx = (int) ois.readObject();
                 selectiony = (int) ois.readObject();
                 board2.changeColor(selectionx, selectiony, Color.RED);
-            }
+            //}
         }
         oos.close();
         ois.close();
