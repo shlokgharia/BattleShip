@@ -73,9 +73,11 @@ public class Engine
 
     public static boolean selections()
     {
-        System.out.println("Please input name");
+        System.out.println("Please input your name");
         String name = scan.nextLine();
+        System.out.println("Now, select 3 ships from the selection board (Press enter when done)");
         ShipSelection ship = new ShipSelection();
+        scan.nextLine();
         return true;
     }
 
