@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ShipBoard()
+comment1.params=x\ y\ c
+comment1.target=void\ changeColor(int,\ int,\ java.awt.Color)
+numComments=2
